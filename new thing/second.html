@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <div class="div3">   
+    <h1>Welcome, <span id="userName">Guest</span>!</h1>
+    <span class="para">So, Sir thank you for teaching us in the initial days of our college journey. We have immense repsect for you because of the way you have guided us, the way you taught us, and the way you of your teaching is awesome as it contains humour,learning and seriousness. So thank you for all of this.</span>
+    <span>But we all wanted to as you one question. So press next ↓</span>
+    </div>
+
+    <span class="div"><a class="SA1" href="third.html">Next</a></span>
+
+    <script>
+        window.onload = function() {
+            const userName = localStorage.getItem('userName'); // Retrieve the name from localStorage
+            if (userName) {
+                document.getElementById('userName').textContent = userName;
+            }
+        };
+    </script>
+</body>
+</html>

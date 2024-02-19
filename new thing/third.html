@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <div class="div4">
+    <span>SO SIR WE JUST WANTED TO KNOW,WILL YOU TEACH US AFTER THE FIRST INTERNAL EXAMS???</span>
+    </div>
+    <div class="div4">
+        <span class="div"><a class="SA SA2" href="/no.html">YES</a></span>
+        <a href="/no.html"><button class="SA SA3" id="floatButton">NO</button></a>
+    </div>
+    <script>
+        let attempts = 0;
+
+document.getElementById('floatButton').addEventListener('mouseover', function(event) {
+    if (attempts < 10) {
+        event.preventDefault(); // Prevent the button from being "clicked"
+        
+        // Randomly move the button
+        const deltaX = Math.random() * 100 - 0; // Move up to 50px left/right
+        const deltaY = Math.random() * 100 - 0; // Move up to 50px up/down
+        this.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+        attempts++;
+    }
+    // After 3 attempts, the button will be clickable as usual
+});
+    </script>
+</body>
+</html>

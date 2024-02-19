@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Name</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <div class="div2">
+    <label for="nameInput">Please enter your name:</label>
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <button class="btn" onclick="saveName()">Submit</button>
+    </div>
+    <script>
+        function saveName() {
+            const name = document.getElementById('nameInput').value;
+            localStorage.setItem('userName', name); // Save the name in localStorage
+            window.location.href = 'second.html'; // Redirect to the next page
+        }
+    </script>
+</body>
+</html>

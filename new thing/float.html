@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Button</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #floatButton {
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <button id="floatButton">NO</button>
+
+    <script>
+        let attempts = 0;
+
+        document.getElementById('floatButton').addEventListener('mouseover', function(event) {
+            if (attempts < 100) {
+                event.preventDefault(); // Prevent the button from being "clicked"
+                
+                // Randomly move the button
+                const deltaX = Math.random() * 100 - 0; // Move up to 50px left/right
+                const deltaY = Math.random() * 100 - 0; // Move up to 50px up/down
+                this.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+                attempts++;
+            }
+            // After 3 attempts, the button will be clickable as usual
+        });
+    </script>
+</body>
+</html>
